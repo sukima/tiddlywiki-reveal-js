@@ -1,0 +1,26 @@
+{
+  "name": "tiddlywiki-reveal-js",
+  "version": "1.0.0",
+  "description": "Reveal.js plugin for TiddlyWiki",
+  "author": "Devin Weaver (@sukima) <suki@tritarget.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sukima/tiddlywiki-reveal-js.git"
+  },
+  "scripts": {
+    "build": "tiddlywiki --build index"
+  },
+  "devDependencies": {
+    "reveal.js": "^4.0.2",
+    "tiddlywiki": "^5.1.21"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=10"
+  },
+  "volta": {
+    "node": "12.16.2",
+    "yarn": "1.22.5"
+  }
+}
