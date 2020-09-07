@@ -12,9 +12,10 @@ type: text/css
 .pink-links a:hover {
   color: #8dcffc;
 }
-.uppercase {
-  text-transform: uppercase;
-}
 .upsidedown {
   transform: rotate(180deg);
+}
+.uppercase,
+.reveal .uppercase {
+  text-transform: uppercase;
 }
