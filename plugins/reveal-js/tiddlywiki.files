@@ -1,0 +1,29 @@
+{
+  "directories": ["docs", "libs", "widgets"],
+  "tiddlers": [
+    {
+      "file": "../../node_modules/reveal.js/dist/reveal.js",
+      "fields": {
+        "title": "$:/plugins/sukima/reveal-js/reveal.js",
+        "type": "application/javascript",
+        "module-type": "library"
+      }
+    },
+    {
+      "file": "../../node_modules/reveal.js/dist/reveal.css",
+      "fields": {
+        "title": "$:/plugins/sukima/reveal-js/reveal.css",
+        "type": "text/css",
+        "tags": ["$:/tags/Stylesheet"]
+      }
+    },
+    {
+      "file": "../../node_modules/reveal.js/dist/theme/simple.css",
+      "fields": {
+        "title": "$:/plugins/sukima/reveal-js/theme/simple.css",
+        "type": "text/css",
+        "tags": ["$:/tags/Stylesheet"]
+      }
+    }
+  ]
+}
