@@ -4,6 +4,7 @@ title: Introduction/05
 tags: Introduction
 type: text/vnd.tiddlywiki
 animate: true
+delay: 3000
 
 @@.uppercase
 !! Even Prettier Animations

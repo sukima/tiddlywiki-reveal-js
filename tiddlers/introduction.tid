@@ -3,9 +3,9 @@ modifier: Sukima
 title: Introduction
 type: text/vnd.tiddlywiki
 
-<$presentation transition="slide" autoSlide="8000" loop controls progress center>
+<$presentation transition="slide" autoSlide="5000" loop controls progress center>
 <$list filter="[tag[Introduction]sort[title]]">
-<$slide tiddlerTitle={{!!title}} backgroundColor={{!!color}} autoAnimate={{!!animate}} autoAnimateUnmatched="fade">
+<$slide tiddlerTitle={{!!title}} backgroundColor={{!!color}} autoAnimate={{!!animate}} autoAnimateUnmatched="fade" autoslide={{!!delay}}>
 <$transclude mode="block" />
 </$slide>
 </$list>

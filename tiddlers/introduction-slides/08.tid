@@ -3,6 +3,7 @@ modifier: Sukima
 title: Introduction/08
 tags: Introduction
 type: text/vnd.tiddlywiki
+delay: 8000
 
 @@.uppercase
 !! ~WikiText Compatible

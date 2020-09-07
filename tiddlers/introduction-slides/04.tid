@@ -4,6 +4,7 @@ title: Introduction/04
 tags: Introduction
 type: text/vnd.tiddlywiki
 animate: true
+delay: 3000
 
 @@.uppercase
 !! Pretty Code
