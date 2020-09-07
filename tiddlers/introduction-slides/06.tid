@@ -1,0 +1,13 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/06
+tags: Introduction
+type: text/vnd.tiddlywiki
+
+@@.uppercase
+!! Fullscreen
+@@
+
+Press <kbd>F</kbd> to enter <strong>fullscreen</strong> mode.
+
+Press <kbd>ESC</kbd> to return to embedded mode.

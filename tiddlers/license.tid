@@ -1,0 +1,6 @@
+creator: Sukima
+modifier: Sukima
+title: License
+type: text/vnd.tiddlywiki
+
+{{$:/plugins/sukima/reveal-js/license}}

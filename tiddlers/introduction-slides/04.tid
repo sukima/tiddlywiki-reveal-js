@@ -1,0 +1,25 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/04
+tags: Introduction
+type: text/vnd.tiddlywiki
+animate: true
+
+@@.uppercase
+!! Pretty Code
+@@
+
+<$slidecodeblock autoAnimateUnmatched="fade" language="javascript" trim lineNumbers id="code-animation" code="""
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+
+export default class MyComponent extends Component {
+
+  @tracked count = 0;
+
+  ...
+
+}
+""" />
+
+<small>Code syntax highlighting courtesy of [[TiddlyWiki's highlight.js plugin|https://tiddlywiki.com/plugins/tiddlywiki/highlight]].</small>

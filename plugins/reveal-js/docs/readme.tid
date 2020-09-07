@@ -10,6 +10,10 @@ It uses two widgets `<$presentation>` and `<$slide>`. A simple example:
 <$presentation>
 <$slide>Welcome to ''Reveal.js''</$slide>
 <$slide>Embedded inside TiddlyWiki</$slide>
+<$slide>
+  <$slide>Vertical Slides</$slide>
+  <$slide>Can also me manged with one level of nesting</$slide>
+</$slide>
 </$presentation>
 ```
 
@@ -57,11 +61,24 @@ It is also possible to have TiddlyWiki dynamically build the presentation for yo
 ```xml
 <$presentation>
 <$list filter="[tag[slide]sort[title]]">
-<$slide backgroundColor={{!!color}}>
-<$transclude />
+<$slide tiddlerTitle={{!!title}} backgroundColor={{!!color}}>
+<$transclude mode="block" />
 </$slide>
 </$list>
 </$presentation>
+```
+
+<small>`tiddlerTitle` is added so the rendered DOM node can have a `data-tiddler-title` attribute which a custom stylesheet could be used to further customize the slide.</small>
+
+!! Code Blocks
+
+Reveal.js uses it's own code highlighting mechanics. To make things compatible and animate smoothly we have a custom `<$slidecodeblock>` component which takes the same attributes as the <code>[[<$codeblock>|https://tiddlywiki.com/#CodeBlockWidget]]</code> and also the ''camelCased'' option that Reveal.js understands.
+
+```xml
+<$slidecodeblock language-"javascript" trim lineNumbers="3-5" code="""
+import { tracked } from '@glimmer/tracking';
+…
+""" />
 ```
 
 !! Technical Details
@@ -81,3 +98,7 @@ The `<$slide>` widget will generate a `<section>` converting the ''camelCase'' a
 !! Known caveats
 
 Tiddlers with an embedded presentation will ''not'' refresh when slides change. This is an unfortunate limitation with the Reveal.js library as it expects to be initialized once and not have the DOM mutate beneath it. This only affects dynamic adding and removing of slides via TiddlyWiki. Updating a slides content will be reflected in a currently rendered presentation. Close and reopen the presentation tiddler to get the updated slides.
+
+The `hash` configuration options is not compatible with TiddlyWiki.
+
+The Speaker notes does not work with TiddlyWiki as it depends on routing to the hash URL which TiddlyWiki intercepts.

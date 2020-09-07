@@ -1,0 +1,20 @@
+creator: Sukima
+modifier: Sukima
+title: SiteStyles
+tags: $:/tags/Stylesheet
+type: text/css
+
+.pink-links a,
+.pink-links a:active,
+.pink-links a:visited {
+  color: rgb(237, 100, 166);
+}
+.pink-links a:hover {
+  color: #8dcffc;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.upsidedown {
+  transform: rotate(180deg);
+}

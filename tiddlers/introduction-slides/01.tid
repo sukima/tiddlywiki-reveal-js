@@ -1,0 +1,18 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/01
+tags: Introduction
+type: text/vnd.tiddlywiki
+color: #1a1626
+
+[img height=180 [RevealLogo.svg]]
+
+!!! The HTML Presentation Framework
+
+@@.pink-links
+<small>Created by [[Hakim El Hattab|http://hakim.se]] and [[contributors|https://github.com/hakimel/reveal.js/graphs/contributors]]</small>
+@@
+
+@@.pink-links
+<small>~TiddlyWiki Plugin Created by [[Devin Weaver|https://tritarget.org]]</small>
+@@

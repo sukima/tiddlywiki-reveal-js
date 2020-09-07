@@ -1,0 +1,7 @@
+creator: Sukima
+modifier: Sukima
+title: $:/plugins/sukima/reveal-js/styles.css
+tags: $:/tags/Stylesheet
+type: text/css
+
+pre table { border: none; }

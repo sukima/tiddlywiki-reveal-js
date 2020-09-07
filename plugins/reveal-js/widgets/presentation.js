@@ -15,10 +15,20 @@ Embedded Reveal.js presentation
 const Widget = require('$:/core/modules/widgets/widget.js').widget;
 const { assignDataset } = require('$:/plugins/sukima/reveal-js/libs/utils.js');
 
+function loadReveal() {
+	return [
+		require('$:/plugins/sukima/reveal-js/reveal.js'),
+		[
+			require('$:/plugins/sukima/reveal-js/reveal-highlight.js'),
+			require('$:/plugins/sukima/reveal-js/reveal-zoom.js')
+		]
+	];
+}
+
 class PresentationWidget extends Widget {
 
 	render(parent, nextSibling) {
-		let Reveal = require('$:/plugins/sukima/reveal-js/reveal.js');
+		let [Reveal, revealPlugins] = loadReveal();
 		this.parentDomNode = parent;
 		this.computeAttributes();
 		this.execute();
@@ -34,9 +44,9 @@ class PresentationWidget extends Widget {
 		this.domNodes.push(revealNode);
 		this.revealInstance = new Reveal(revealNode, {
 			embedded: true,
-			keyboardCondition: 'focused'
+			keyboardCondition: 'focused',
+			plugins: revealPlugins
 		});
-		console.log(this.attributes, assignDataset({}, this.attributes));
 		this.revealInstance.initialize(assignDataset({}, this.attributes));
 	}
 
@@ -49,14 +59,17 @@ class PresentationWidget extends Widget {
 	}
 
 	pruneErroneousWrappings(root) {
-		for (let el of root.children) {
-			if (el.tagName === 'SECTION') { continue; }
-			let parent = el.parentNode;
-			while (el.firstChild && el.firstChild.tagName === 'SECTION') {
-				parent.insertBefore(el.firstChild, el);
-			}
-			parent.removeChild(el);
+		let sections = root.querySelectorAll('section');
+		for (let section of sections) {
+			if (section.parentNode.tagName !== 'P') { continue; }
+			this.pruneErroneousWrapping(section.parentNode);
 		}
+	}
+
+	pruneErroneousWrapping(el) {
+		let parent = el.parentNode;
+		while (el.firstChild) { parent.insertBefore(el.firstChild, el); }
+		parent.removeChild(el);
 	}
 
 }

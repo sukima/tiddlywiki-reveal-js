@@ -1,0 +1,15 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/07
+tags: Introduction
+type: text/vnd.tiddlywiki
+
+@@.uppercase
+!! Point of View
+@@
+
+Press <kbd>ESC</kbd> to enter the slide overview.
+
+Hold down the <kbd>alt</kbd> key (<kbd>ctrl</kbd> in Linux) and click on any element to zoom towards it using zoom.js. Click again to zoom back out.
+
+<small>(NOTE: Use <kbd>ctrl + click</kbd> in Linux.)</small>

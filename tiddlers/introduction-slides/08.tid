@@ -1,0 +1,19 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/08
+tags: Introduction
+type: text/vnd.tiddlywiki
+
+@@.uppercase
+!! ~WikiText Compatible
+@@
+
+All content is ~WikiText compatible including advanced filtering and transclusion.
+
+<$slidecodeblock trim code="""
+<$list filter="[tag[slide]order[title]]">
+<$slide>
+<$transclude mode="block" />
+</$slide>
+</$list>
+""" />

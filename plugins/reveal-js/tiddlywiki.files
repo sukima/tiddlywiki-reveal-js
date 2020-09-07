@@ -10,6 +10,22 @@
       }
     },
     {
+      "file": "../../node_modules/reveal.js/plugin/highlight/highlight.js",
+      "fields": {
+        "title": "$:/plugins/sukima/reveal-js/reveal-highlight.js",
+        "type": "application/javascript",
+        "module-type": "library"
+      }
+    },
+    {
+      "file": "../../node_modules/reveal.js/plugin/zoom/zoom.js",
+      "fields": {
+        "title": "$:/plugins/sukima/reveal-js/reveal-zoom.js",
+        "type": "application/javascript",
+        "module-type": "library"
+      }
+    },
+    {
       "file": "../../node_modules/reveal.js/dist/reveal.css",
       "fields": {
         "title": "$:/plugins/sukima/reveal-js/reveal.css",

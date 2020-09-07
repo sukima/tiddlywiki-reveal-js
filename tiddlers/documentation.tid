@@ -1,0 +1,6 @@
+creator: Sukima
+modifier: Sukima
+title: Documentation
+type: text/vnd.tiddlywiki
+
+{{$:/plugins/sukima/reveal-js/readme}}

@@ -1,0 +1,41 @@
+creator: Sukima
+modifier: Sukima
+title: Introduction/03
+tags: Introduction
+type: text/vnd.tiddlywiki
+
+<$slide>
+
+@@.uppercase
+!! Vertical Slides
+@@
+
+Slides can be nested inside of each other.
+
+Use the //Space key// to navigate through all slides.
+
+[img[Arrow.png]]
+
+</$slide>
+
+<$slide>
+
+@@.uppercase
+!! Basement Level 1
+@@
+
+Nested slides are useful for adding additional detail underneath a high level horizontal slide.
+
+</$slide>
+
+<$slide>
+
+@@.uppercase
+!! Basement Level 2
+@@
+
+That's it, time to go back up.
+
+[img class="upsidedown" [Arrow.png]]
+
+</$slide>
