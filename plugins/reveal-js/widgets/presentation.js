@@ -50,6 +50,12 @@ class PresentationWidget extends Widget {
 		this.revealInstance.initialize(assignDataset({}, this.attributes));
 	}
 
+	refresh(changedTiddlers) {
+		let shouldRerender = this.refreshChildren(changedTiddlers);
+		if (shouldRerender) { this.refreshSelf(); }
+		return shouldRerender;
+	}
+
 	getHeight() {
 		let height = this.getAttribute('$height', '400');
 		if (/[0-9]$/.test(height)) {

@@ -9,6 +9,7 @@
     "url": "https://github.com/sukima/tiddlywiki-reveal-js.git"
   },
   "scripts": {
+    "start": "tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb --listen",
     "build": "tiddlywiki --build index",
     "deploy": "yarn build && gh-pages -d output -b gh-pages"
   },
