@@ -9588,7 +9588,7 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div author="sukima" core-version="&gt;=5.1.21" dependents="" description="Embedded Reveal.js presentations" list="readme license" plugin-type="plugin" source="https://github.com/sukima/tiddlywiki-reveal-js" title="$:/plugins/sukima/reveal-js" type="application/json" version="1.1.0">
+<div author="sukima" core-version="&gt;=5.1.21" dependents="" description="Embedded Reveal.js presentations" list="readme license" plugin-type="plugin" source="https://github.com/sukima/tiddlywiki-reveal-js" title="$:/plugins/sukima/reveal-js" type="application/json" version="1.1.1">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/sukima/reveal-js/reveal.js&quot;: {
@@ -9664,7 +9664,7 @@ Error message and password prompt
         },
         &quot;$:/plugins/sukima/reveal-js/widgets/slidecodeblock&quot;: {
             &quot;title&quot;: &quot;$:/plugins/sukima/reveal-js/widgets/slidecodeblock&quot;,
-            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/sukima/reveal-js/widgets/slidecodeblock\ntype: application/javascript\nmodule-type: widget\n\nRenders Reveal.js compatible codeblocks. Use this is you wish to allow better\nline based animations with Reveal.js\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nconst CodeBlockWidget = require(\&quot;$:/core/modules/widgets/codeblock.js\&quot;).codeblock;\nconst { assignDataset } = require('$:/plugins/sukima/reveal-js/libs/utils.js');\n\nclass SlideCodeblockWidget extends CodeBlockWidget {\n\n\tpostRender() {\n\t\tlet { code, language, id, ...dataAttrs } = this.attributes;\n\t\tassignDataset(this.domNodes[0].children[0].dataset, dataAttrs);\n\t\tassignDataset(this.domNodes[0].dataset, { id });\n\t\tthis.domNodes[0].querySelectorAll('table').forEach(t =&gt; t.style.border = 'none');\n\t}\n\n}\n\nexports.slidecodeblock = SlideCodeblockWidget;\n\n})();\n&quot;,
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/sukima/reveal-js/widgets/slidecodeblock\ntype: application/javascript\nmodule-type: widget\n\nRenders Reveal.js compatible codeblocks. Use this is you wish to allow better\nline based animations with Reveal.js\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nconst CodeBlockWidget = require(\&quot;$:/core/modules/widgets/codeblock.js\&quot;).codeblock;\nconst { assignDataset } = require('$:/plugins/sukima/reveal-js/libs/utils.js');\n\nclass SlideCodeblockWidget extends CodeBlockWidget {\n\n\tpostRender() {\n\t\tlet { code, language, id, ...dataAttrs } = this.attributes;\n\t\tthis.domNodes[0].children[0].classList.add(language);\n\t\tassignDataset(this.domNodes[0].children[0].dataset, dataAttrs);\n\t\tassignDataset(this.domNodes[0].dataset, { id });\n\t\tthis.domNodes[0].querySelectorAll('table').forEach(t =&gt; t.style.border = 'none');\n\t}\n\n}\n\nexports.slidecodeblock = SlideCodeblockWidget;\n\n})();\n&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;module-type&quot;: &quot;widget&quot;
         }
