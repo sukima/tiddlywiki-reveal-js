@@ -21,6 +21,8 @@ The embedded presentation is configured to capture keyboard input only when focu
 
 The content of the `<$slide>` can be WikiText including transcluded tiddlers.
 
+A complementary plugin worth looking at: [[Talk Timer|https://sukima.github.io/tiddlywiki-talktimer]].
+
 !! Usage
 
 The documentation for Reveal.js explains the use of `<section>` with `data-*` attributes to control the slide options. With the above two Widgets the same options are supported.
